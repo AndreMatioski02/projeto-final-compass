@@ -43,14 +43,15 @@
             margin-right: 6rem;
             .number {
                 color: #FFFFFF;
-                font-size: 32px;
+                font-size: 42px;
                 margin: 0;
             }   
             
             .seconds {
                 color: #FFFFFF;
-                font-size: 16px;
+                font-size: 12px;
                 margin: 0;
+                padding-left: 2px;
             }
         }
     }
@@ -83,7 +84,7 @@
             align-self: center;
             border: none;
             font-size: 12px;
-            font-weight: bold;
+            font-weight: 500;
             cursor: pointer;
         }
     }

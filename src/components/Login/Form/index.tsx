@@ -2,9 +2,28 @@ import styles from './Form.module.scss'
 import userIcon from 'assets/images/user-icon.svg'
 import passwordIcon from 'assets/images/password-icon.svg'
 import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import classNames from 'classnames';
 
 export default function Form() {
     const navigate = useNavigate();
+    const [errorActive, setErrorActive] = useState(false);
+
+    function validateForm() {
+        event.preventDefault()
+		let inputs = document.querySelectorAll("input");
+		let valid = true;
+		inputs.forEach(input => {
+			if(input.value == "") {
+				valid = false;
+				input.style.border = "1px solid #E9B425";
+				setErrorActive(true);
+			} else {
+                navigate('/home')
+            }
+		});
+	}
+
     return (        
         <div className={styles.mainDiv}>
             <form>
@@ -15,15 +34,24 @@ export default function Form() {
                 <div className={styles.formDiv}>
                     <p>Login</p>
                     <div className={styles.emailDiv}>
-                        <input type="text" placeholder="Usuário" />
-                        <img src={userIcon} alt="User Icon" />
+                        <input 
+                            type="text" placeholder="Usuário"
+                        />
+                        <img src={userIcon} alt="User Icon"/>
                     </div>
                     <div className={styles.passwordDiv}>
                         <input type="password" placeholder="Senha"/>
-                        <img src={passwordIcon} alt="Password Icon" />
+                        <img src={passwordIcon} alt="Password Icon"/>
                     </div>
-                    <p className={styles.errorMessage}>Ops, usuário ou senha inválidos. Tente novamente!</p>
-                    <button onClick={() => navigate("/home", {replace: true})}>Continuar</button>
+                
+                    <div className={classNames({
+						[styles.errorContainer]: true,
+						[styles.errorContainer__active]: errorActive
+					})}>
+						<p>Ops, usuário ou senha inválidos.</p>
+						<p>Tente novamente!</p>
+					</div>
+                    <button onClick={() => validateForm()}>Continuar</button>
                 </div>
             </form>
         </div>

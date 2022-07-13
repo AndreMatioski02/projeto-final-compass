@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Footer.module.scss'
 
@@ -7,7 +7,7 @@ export default function Footer() {
     
     const navigate = useNavigate();
 
-    function countToLogout(seconds: number = 60) {
+    function countToLogout(seconds: number = 0) {
 		setTimeout(() => {
 			if(seconds > 0) {
 				setSeconds(seconds - 1);
@@ -18,8 +18,12 @@ export default function Footer() {
 		}, 1000);
 	}
 
+    useEffect(() => {
+        countToLogout(seconds)
+    }, [])
+
     return (
-        <footer onLoad={() => countToLogout(seconds)} className={styles.footer} >
+        <footer className={styles.footer} >
             <div className={styles.description}>
                 <div>
                     <p>Essa janela do navegador é usada para manter sua sessão de autenticação ativa. 
