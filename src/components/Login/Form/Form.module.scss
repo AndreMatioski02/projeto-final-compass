@@ -1,0 +1,117 @@
+.mainDiv {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 50%;
+        .welcomeDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            h1 {
+                color: #E0E0E0;
+                font-size: 64px;
+                font-weight: 400;
+                margin: 0;
+                
+            }
+            h2 {
+                color: #E0E0E0;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 8px 16px 0px 0px;
+                flex-wrap: wrap;
+                margin: 0;
+            }
+        }
+    
+        .formDiv {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+    
+            p {
+                font-size: 32px;
+                color: #E0E0E0;
+                font-weight: 400;
+            }
+
+            .emailDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin-bottom: 8px;
+                input {
+                    border: solid 1px #FFFFFF;
+                    background-color: #26292C;
+                    border-radius: 24px;
+                    height: 3rem;
+                    width: 19rem;
+                    padding: 16px;
+                    color: #FFFFFF;
+                    &::placeholder {
+                        color: #FFFFFF;
+                    }
+                }
+                img {
+                    padding-left: 8px;
+                }
+            }
+
+            .passwordDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin-top: 8px;
+                input {
+                    border: solid 1px #FFFFFF;
+                    background-color: #26292C;
+                    border-radius: 24px;
+                    height: 3rem;
+                    width: 19rem;
+                    padding: 16px;
+                    color: #FFFFFF;
+                    &::placeholder {
+                        color: #FFFFFF;
+                    }
+                }
+                img {
+                    padding-left: 8px;
+                }
+            }
+
+            .errorMessage {
+                font-size: 16px;
+                color: #E9B425;
+                display: none;
+            }
+
+            .show {
+                font-size: 16px;
+                color: #E9B425;
+                display: flex;
+            }
+
+            button {
+                border-radius: 24px;
+                border: none;
+                background-color: #FF2D04;
+                height: 3rem;
+                width: 19rem;
+                color: #FFFFFF;
+                font-weight: bold;
+                margin-top: 64px;
+            }
+        }
+    }
+    
+}

@@ -1,0 +1,25 @@
+.weatherContainer {  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+  &__location {
+      font-weight: 500;
+  }
+  &__weather {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 5%;
+      justify-content: flex-start;
+      flex-direction: row;
+      span {
+          margin-left: 8%;
+          font-size: 2rem;
+          font-weight: bold;
+      }
+  }
+}

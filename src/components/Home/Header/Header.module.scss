@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    .logo {
+        margin: 16px;
+    }
+
+    .weather {
+        margin: 16px;
+        font-size: 16px;
+    }
+}
