@@ -7,6 +7,8 @@ import classNames from 'classnames';
 
 export default function Form() {
     const navigate = useNavigate();
+    const [inputActive, setInputActive] = useState(false);
+    const [iconInactive, setIconInactive] = useState(false);
     const [errorActive, setErrorActive] = useState(false);
 
     function validateForm() {
@@ -24,6 +26,16 @@ export default function Form() {
 		});
 	}
 
+    function moveIcon(input: HTMLInputElement) {
+        setIconInactive(true);
+        setInputActive(true);
+    }
+
+    function returnIcon(input: HTMLInputElement) {
+        setIconInactive(false);
+        setInputActive(false);
+    }
+
     return (        
         <div className={styles.mainDiv}>
             <form>
@@ -35,13 +47,39 @@ export default function Form() {
                     <p>Login</p>
                     <div className={styles.emailDiv}>
                         <input 
+                            className={classNames({
+                                [styles.formInput]: true,
+                                [styles["userFormInput--active"]]: inputActive
+                            })}
                             type="text" placeholder="Usuário"
+                            onFocus={(event) => moveIcon(event.target)}
+                            onBlur={(event) => returnIcon(event.target)}
                         />
-                        <img src={userIcon} alt="User Icon"/>
+                        <img 
+                            src={userIcon} alt="User Icon"
+                            className={classNames({
+                                [styles.userIcon]: true,
+                                [styles.inactiveIcon]: iconInactive
+                            })} 
+                        />
                     </div>
                     <div className={styles.passwordDiv}>
-                        <input type="password" placeholder="Senha"/>
-                        <img src={passwordIcon} alt="Password Icon"/>
+                        <input 
+                            className={classNames({
+                                [styles.formInput]: true,
+                                [styles["passFormInput--active"]]: inputActive
+                            })}
+                            type="password" placeholder="Senha"
+                            onFocus={(event) => moveIcon(event.target)}
+                            onBlur={(event) => returnIcon(event.target)}
+                        />
+                        <img 
+                        src={passwordIcon} alt="Password Icon"
+                        className={classNames({
+                            [styles.userIcon]: true,
+                            [styles.inactiveIcon]: iconInactive
+                        })} 
+                        />
                     </div>
                 
                     <div className={classNames({
