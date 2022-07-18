@@ -89,7 +89,10 @@ export default function Form() {
 						<p>Ops, usuário ou senha inválidos.</p>
 						<p>Tente novamente!</p>
 					</div>
-                    <button onClick={() => validateForm()}>Continuar</button>
+                    <div className={styles.signUpDiv}>
+                        <p className={styles.signUpText}>Não possui cadastro?<a onClick={() => navigate("cadastro", {replace: true})}> Cadastrar-se aqui</a></p>                        
+                    </div>
+                    <button onClick={() => validateForm()}>Continuar</button>                    
                 </div>
             </form>
         </div>

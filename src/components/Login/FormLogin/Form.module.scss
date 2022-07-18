@@ -1,0 +1,171 @@
+.mainDiv {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 50%;
+        .welcomeDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            h1 {
+                color: #E0E0E0;
+                font-size: 64px;
+                font-weight: 200;
+                margin: 0;
+                
+            }
+            h2 {
+                color: #E0E0E0;
+                font-size: 16px;
+                font-weight: 400;
+                padding: 8px 16px 0px 0px;
+                flex-wrap: wrap;
+                margin: 0;
+            }
+        }
+    
+        .formDiv {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+    
+            p {
+                font-size: 32px;
+                color: #E0E0E0;
+                font-weight: 300;
+            }
+
+            .emailDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin-bottom: 8px;
+                input {
+                    border: solid 1px #FFFFFF;
+                    background-color: #26292C;
+                    border-radius: 24px;
+                    height: 3rem;
+                    width: 19rem;
+                    padding: 16px;
+                    color: #FFFFFF;
+                    &::placeholder {
+                        color: #FFFFFF;
+                    }
+                }
+                img {
+                    padding-left: 8px;
+                }       
+            }
+
+            .passwordDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+                margin-top: 8px;
+                input {
+                    border: solid 1px #FFFFFF;
+                    background-color: #26292C;
+                    border-radius: 24px;
+                    height: 3rem;
+                    width: 19rem;
+                    padding: 16px;
+                    color: #FFFFFF;
+                    &::placeholder {
+                        color: #FFFFFF;
+                    }
+                }
+                img {
+                    padding-left: 8px;
+                }
+            }
+
+            
+
+            .userIcon, .passIcon {
+                width: 30px;
+            }
+        
+            .userFormInput--active {
+                padding-right: 12%;
+                background-image: url("../../../assets/images/user-icon.svg");
+                background-repeat: no-repeat;
+                background-position: center right 5%;
+                background-size: 7%;
+                transition: 0ms;
+            }
+        
+            .passFormInput--active {
+                padding-right: 12%;
+                background-image: url("../../../assets/images/password-icon.svg");
+                background-repeat: no-repeat;
+                background-position: center right 5%;
+                background-size: 7%;
+                transition: 0s;
+            }
+        
+            .inactiveIcon {
+                display: none;
+            }
+
+            .errorContainer {
+				justify-content: center;
+                align-items: center;
+                flex-direction: column;
+				display: none;
+				width: 90%;
+                margin: 0;
+                margin-top: 1rem;
+				p {
+					color: #E9B425;
+					font-weight: 500;
+					font-size: 0.8rem;
+					margin: 0;
+				}
+				&__active {
+					display: flex;
+				}
+			}
+
+            .signUpDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 1rem;
+                margin-top: 1rem;
+                .signUpText{
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 200;
+                    a {
+                        color: #FF2D04;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+
+            button {
+                border-radius: 24px;
+                border: none;
+                background-color: #FF2D04;
+                height: 3rem;
+                width: 19rem;
+                color: #FFFFFF;
+                font-weight: 400;
+                margin-top: 48px;
+            }
+        }
+    }
+    
+}

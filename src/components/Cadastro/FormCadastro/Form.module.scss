@@ -17,7 +17,7 @@
             h1 {
                 color: #E0E0E0;
                 font-size: 64px;
-                font-weight: 300;
+                font-weight: 200;
                 margin: 0;
                 
             }
@@ -136,6 +136,25 @@
 				}
 			}
 
+            .signUpDiv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 1rem;
+                margin-top: 1rem;
+                .signUpText{
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: 200;
+                    a {
+                        color: #FF2D04;
+                        text-decoration: none;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+
             button {
                 border-radius: 24px;
                 border: none;
@@ -144,7 +163,7 @@
                 width: 19rem;
                 color: #FFFFFF;
                 font-weight: 400;
-                margin-top: 64px;
+                margin-top: 48px;
             }
         }
     }
