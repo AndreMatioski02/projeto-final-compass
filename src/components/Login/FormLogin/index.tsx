@@ -4,9 +4,12 @@ import passwordIcon from 'assets/images/password-icon.svg'
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import classNames from 'classnames';
+import { useContext } from 'react';
+import { UserContext } from 'context/User';
 
 export default function Form() {
-    const navigate = useNavigate();
+    const navigate = useNavigate();    
+    const { email, setEmail, password, setPassword } = useContext(UserContext);
     const [inputActive, setInputActive] = useState(false);
     const [iconInactive, setIconInactive] = useState(false);
     const [errorActive, setErrorActive] = useState(false);
@@ -54,6 +57,8 @@ export default function Form() {
                             type="text" placeholder="Usuário"
                             onFocus={(event) => moveIcon(event.target)}
                             onBlur={(event) => returnIcon(event.target)}
+                            value={ email }
+                            onChange={(event) => (setEmail(event.target.value))}
                         />
                         <img 
                             src={userIcon} alt="User Icon"
@@ -72,6 +77,8 @@ export default function Form() {
                             type="password" placeholder="Senha"
                             onFocus={(event) => moveIcon(event.target)}
                             onBlur={(event) => returnIcon(event.target)}
+                            value={ password }
+                            onChange={(event) => (setPassword(event.target.value))}
                         />
                         <img 
                         src={passwordIcon} alt="Password Icon"

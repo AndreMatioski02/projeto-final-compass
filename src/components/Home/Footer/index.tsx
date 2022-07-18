@@ -1,11 +1,19 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Footer.module.scss'
+import { useContext } from 'react';
+import { UserContext } from 'context/User';
 
 export default function Footer() {
     const [seconds, setSeconds] = useState<number>(60);
+    const { email, setEmail, password, setPassword } = useContext(UserContext);
     
     const navigate = useNavigate();
+
+    function resetContext() {
+		setEmail("");
+		setPassword("");
+	}
 
     function countToLogout(seconds: number = 0) {
 		setTimeout(() => {
@@ -14,6 +22,7 @@ export default function Footer() {
 				return countToLogout(seconds - 1);
 			}else {
 				navigate("/", {replace: true})
+                resetContext();
 			}
 		}, 1000);
 	}
@@ -43,7 +52,14 @@ export default function Footer() {
             </div>
             <div className={styles.buttons}>     
                 <a href="https://www.google.com/" target="_blank"><button className={styles.continue}>Continuar Navegando</button></a>
-                <button className={styles.logout} onClick={() => navigate("/", {replace: true})}>Logout</button>                
+                <button 
+                    className={styles.logout} 
+                    onClick={() => (
+                        resetContext(),
+                        navigate("/", {replace: true}))}
+                >
+                    Logout
+                </button>                
             </div>
         </footer>
     )
