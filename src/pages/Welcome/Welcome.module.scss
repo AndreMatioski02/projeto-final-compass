@@ -1,0 +1,12 @@
+.divImage {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+    background-image: url(../../assets/images/main-image.png);
+    background-position: left 10%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}

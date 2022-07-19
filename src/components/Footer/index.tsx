@@ -17,8 +17,8 @@ export default function Footer() {
 				setSeconds(seconds - 1);
 				return countToLogout(seconds - 1);
 			}else {
-                logout()
                 resetContext()
+                logout()
 				navigate("/", {replace: true})
                 
 			}

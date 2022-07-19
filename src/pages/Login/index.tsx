@@ -70,7 +70,7 @@ export default function Login() {
 		    			</div>
                         <div className={styles.signUpDiv}>
                             <p className={styles.signUpText}>Não possui cadastro?<a onClick={() => (
-                                navigate("cadastro", {replace: true}),
+                                navigate("/cadastro", {replace: true}),
                                 resetContext()
                             )}
                             > Cadastrar-se aqui</a></p>                        

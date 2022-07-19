@@ -79,7 +79,7 @@ export default function Cadastro() {
                         <div className={styles.signUpDiv}>
                             <p className={styles.signUpText}>
                                 Já possui cadastro? 
-                                <a onClick={() => navigate("/", {replace: true})}> 
+                                <a onClick={() => navigate("/login", {replace: true})}> 
                                     {` Faça Login aqui`}
                                 </a>
                             </p>                        
