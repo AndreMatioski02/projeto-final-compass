@@ -2,18 +2,14 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Footer.module.scss'
 import { useContext } from 'react';
-import { UserContext } from 'context/User';
+import { UserLoginContext } from 'context/UserLogin';
+import { signOut } from "firebase/auth";
+import { auth } from 'data/firebase';
 
 export default function Footer() {
     const [seconds, setSeconds] = useState<number>(60);
-    const { email, setEmail, password, setPassword } = useContext(UserContext);
-    
+    const { setEmail, setPassword } = useContext(UserLoginContext);    
     const navigate = useNavigate();
-
-    function resetContext() {
-		setEmail("");
-		setPassword("");
-	}
 
     function countToLogout(seconds: number = 0) {
 		setTimeout(() => {
@@ -21,15 +17,33 @@ export default function Footer() {
 				setSeconds(seconds - 1);
 				return countToLogout(seconds - 1);
 			}else {
+                logout()
+                resetContext()
 				navigate("/", {replace: true})
-                resetContext();
+                
 			}
 		}, 1000);
-	}
+	}    
 
     useEffect(() => {
         countToLogout(seconds)
     }, [])
+
+    
+    useEffect(() => {
+		return () => {
+		  setSeconds(0); 
+		};
+	}, []);    
+
+    const logout = async () => {
+		await signOut(auth);
+	};
+
+    function resetContext() {
+		setEmail("");
+		setPassword("");
+	}
 
     return (
         <footer className={styles.footer} >
@@ -55,8 +69,10 @@ export default function Footer() {
                 <button 
                     className={styles.logout} 
                     onClick={() => (
-                        resetContext(),
-                        navigate("/", {replace: true}))}
+                        resetContext(),                                               
+                        logout(),
+                        navigate("/", {replace: true})
+                    )}
                 >
                     Logout
                 </button>                
