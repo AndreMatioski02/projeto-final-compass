@@ -1,20 +1,22 @@
 import styles from './Cadastro.module.scss';
 import Logo from 'assets/images/login-logo-compasso.svg'
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 import { useContext } from 'react';
 import { UserSignUpContext } from 'context/UserSignUp'
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { createUserWithEmailAndPassword, signOut } from 'firebase/auth';
 import { addDoc, collection } from 'firebase/firestore';
 import { auth, db } from 'data/firebase';
 import InputSignUpEmail from 'components/Inputs/signUpEmail';
 import InputSignUpPassword from 'components/Inputs/signUpPassword';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 export default function Cadastro() {
     const navigate = useNavigate();    
     const { email, setEmail, password, setPassword } = useContext(UserSignUpContext);
-    const [errorActive, setErrorActive] = useState(false);
+    const [errorActive, setErrorActive] = useState(false);    
+    const [user, loading] = useAuthState(auth);
 
     function validateForm() {
         event.preventDefault()
@@ -27,11 +29,8 @@ export default function Cadastro() {
 				setErrorActive(true);
                 return
 			} else {
-                registerWithEmailAndPassword(email, password); 
-                setEmail("");
-                setPassword("");   
+                registerWithEmailAndPassword(email, password);                 
                 alert("Cadastro realizado com sucesso!");
-                navigate('/home') 
             }
 		});
 	}
@@ -49,6 +48,11 @@ export default function Cadastro() {
             console.log(err)
         }
     }
+
+    useEffect(() => {
+        if (loading) return;
+        if (user) navigate("/home");
+    }, [user, loading]);
 
     return (                                 
         <main className={styles.mainCadastro}>
