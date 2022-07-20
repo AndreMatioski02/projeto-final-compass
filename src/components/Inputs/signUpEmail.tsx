@@ -18,7 +18,6 @@ export default function InputSignUpEmail() {
 
     useEffect(() => {
         regex.test(email.toLowerCase()) ? setEmailCorrect(true) : setEmailCorrect(false);
-        console.log(emailCorrect)
     }, [email, setEmailCorrect]); 
 
     function moveIcon(input: HTMLInputElement) {

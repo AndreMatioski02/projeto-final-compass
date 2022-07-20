@@ -32,15 +32,10 @@ export default function InputSignUpPassword() {
         RegExUpperCase.test(password) ? setUpperCase(true) : setUpperCase(false);
         RegExLowerCase.test(password) ? setLowerCase(true) : setLowerCase(false);
         RegExNumber.test(password) ? setNumber(true) : setNumber(false);
-        console.log("Min",minCharacters)
-        console.log("up",upperCase)
-        console.log("low",lowerCase)
-        console.log("number",number)
     }, [password])
 
     function validatePassword() {
-        validations.every(allTrue) ? setPasswordCorrect(true) : setPasswordCorrect(false);        
-        console.log("correct",passwordCorrect)
+        validations.every(allTrue) ? setPasswordCorrect(true) : setPasswordCorrect(false);    
     }
 
     function allTrue(validation: boolean) {
