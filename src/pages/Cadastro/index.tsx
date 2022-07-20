@@ -1,5 +1,7 @@
 import styles from './Cadastro.module.scss';
 import Logo from 'assets/images/login-logo-compasso.svg'
+import notChecked from 'assets/notCheckedIcon.png'
+import checked from 'assets/checkedIcon.png'
 import { useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
@@ -20,6 +22,10 @@ export default function Cadastro() {
             password, 
             setPassword,
             passwordCorrect, 
+            minCharacters,
+            lowerCase,
+            upperCase,
+            number
         } = useContext(UserSignUpContext);
     const [errorActive, setErrorActive] = useState(false);    
     const [user, loading] = useAuthState(auth);
@@ -82,10 +88,77 @@ export default function Cadastro() {
                         <InputSignUpEmail />
                         <InputSignUpPassword />                    
                         <div className={styles.passwordChecks}>
-                            <p>Mínimo de 6 dígitos</p>
-                            <p>Letra maiúscula</p>
-                            <p>Letra minúscula</p>
-                            <p>Número</p>
+                            <div className={styles.checksDiv}>
+                                <img src={notChecked} className={classNames({
+                                    [styles.iconNotChecked]: true,
+                                    [styles.iconNotChecked__active]: minCharacters
+                                    })}>                            
+                                </img>
+                                <img src={checked} className={classNames({
+                                    [styles.iconChecked]: true,
+                                    [styles.iconChecked__active]: minCharacters
+                                    })}>                            
+                                </img>
+                                <p className={classNames({
+                                    [styles.checked]: true,
+                                    [styles.checked__active]: minCharacters
+                                    })}
+                                >Mínimo de 6 dígitos</p>
+                            </div>
+
+                            <div className={styles.checksDiv}>
+                                <img src={notChecked} className={classNames({
+                                    [styles.iconNotChecked]: true,
+                                    [styles.iconNotChecked__active]: upperCase
+                                    })}>                            
+                                </img>
+                                <img src={checked} className={classNames({
+                                    [styles.iconChecked]: true,
+                                    [styles.iconChecked__active]: upperCase
+                                    })}>                            
+                                </img>
+                                <p className={classNames({
+                                    [styles.checked]: true,
+                                    [styles.checked__active]: upperCase
+                                    })}
+                                >Letra maiúscula</p>
+                            </div>
+                            
+                            <div className={styles.checksDiv}>
+                                <img src={notChecked} className={classNames({
+                                    [styles.iconNotChecked]: true,
+                                    [styles.iconNotChecked__active]: lowerCase
+                                    })}>                            
+                                </img>
+                                <img src={checked} className={classNames({
+                                    [styles.iconChecked]: true,
+                                    [styles.iconChecked__active]: lowerCase
+                                    })}>                            
+                                </img>
+                                <p className={classNames({
+                                    [styles.checked]: true,
+                                    [styles.checked__active]: lowerCase
+                                    })}
+                                >Letra minúscula</p>
+                            </div>
+
+                            <div className={styles.checksDiv}>                                    
+                                <img src={notChecked} className={classNames({
+                                    [styles.iconNotChecked]: true,
+                                    [styles.iconNotChecked__active]: number
+                                    })}>                            
+                                </img>
+                                <img src={checked} className={classNames({
+                                    [styles.iconChecked]: true,
+                                    [styles.iconChecked__active]: number
+                                    })}>                            
+                                </img>
+                                <p className={classNames({
+                                    [styles.checked]: true,
+                                    [styles.checked__active]: number
+                                    })}
+                                >Número</p>
+                            </div>
                         </div>
 
                         <div className={classNames({
