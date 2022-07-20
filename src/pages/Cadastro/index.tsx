@@ -14,23 +14,36 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 
 export default function Cadastro() {
     const navigate = useNavigate();    
-    const { email, setEmail, password, setPassword } = useContext(UserSignUpContext);
+    const { email, 
+            setEmail,
+            emailCorrect,
+            password, 
+            setPassword,
+            passwordCorrect, 
+        } = useContext(UserSignUpContext);
     const [errorActive, setErrorActive] = useState(false);    
     const [user, loading] = useAuthState(auth);
+    
+    useEffect(() => {
+        if (loading) return;
+        if (user) navigate("/home");
+    }, [user, loading]);
 
     function validateForm() {
         event.preventDefault()
 		let inputs = document.querySelectorAll("input");
-		let valid = true;
 		inputs.forEach(input => {
-			if(input.value == "") {
-				valid = false;
+			if(!emailCorrect || !passwordCorrect) {
 				input.style.border = "1px solid #E9B425";
 				setErrorActive(true);
                 return
-			} else {
-                registerWithEmailAndPassword(email, password);                 
-                alert("Cadastro realizado com sucesso!");
+			} else { 
+                input.style.border = "1px solid #FFFFFF";                
+                setErrorActive(false) 
+                alert("Cadastro realizado com sucesso!")
+                navigate('/home')                                
+                registerWithEmailAndPassword(email, password);
+                resetContext();           
             }
 		});
 	}
@@ -45,14 +58,16 @@ export default function Cadastro() {
                 email,
             });                       
         } catch (err: any) {
-            console.log(err)
+            setErrorActive(true);
+            let inputs = document.querySelectorAll("input");
+		    inputs.forEach(input => {input.style.border = "1px solid #E9B425"})
         }
     }
 
-    useEffect(() => {
-        if (loading) return;
-        if (user) navigate("/home");
-    }, [user, loading]);
+    function resetContext() {
+		setEmail("");
+		setPassword("");
+	}
 
     return (                                 
         <main className={styles.mainCadastro}>
@@ -83,12 +98,19 @@ export default function Cadastro() {
                         <div className={styles.signUpDiv}>
                             <p className={styles.signUpText}>
                                 Já possui cadastro? 
-                                <a onClick={() => navigate("/login", {replace: true})}> 
+                                <a 
+                                    onClick={() => (
+                                        navigate("/login", {replace: true}),
+                                        resetContext()
+                                    )}> 
                                     {` Faça Login aqui`}
                                 </a>
                             </p>                        
                         </div>
-                        <button onClick={() => validateForm()}>Cadastrar-se</button>                    
+                        <button 
+                        onClick={() => (
+                            validateForm()
+                        )}>Cadastrar-se</button>                    
                     </div>
                 </form>
             </div>            

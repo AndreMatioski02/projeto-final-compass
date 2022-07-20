@@ -1,13 +1,25 @@
 import classNames from 'classnames';
 import userIcon from 'assets/images/user-icon.svg'
 import { UserSignUpContext } from 'context/UserSignUp';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from './Input.module.scss';
 
 export default function InputSignUpEmail() {
-    const { email, setEmail } = useContext(UserSignUpContext);
+    const { email, 
+            setEmail, 
+            setEmailCorrect,
+            emailCorrect, 
+            errorActive 
+        } = useContext(UserSignUpContext);
     const [inputActive, setInputActive] = useState(false);
-    const [iconInactive, setIconInactive] = useState(false);    
+    const [iconInactive, setIconInactive] = useState(false);  
+    
+    const regex = /^([a-z]){1,}([a-z0-9._-]){1,}([@]){1}([a-z]){2,}([.]){1}([a-z]){2,}([.]?){1}([a-z]?){2,}$/i;
+
+    useEffect(() => {
+        regex.test(email.toLowerCase()) ? setEmailCorrect(true) : setEmailCorrect(false);
+        console.log(emailCorrect)
+    }, [email, setEmailCorrect]); 
 
     function moveIcon(input: HTMLInputElement) {
         setIconInactive(true);
@@ -23,8 +35,8 @@ export default function InputSignUpEmail() {
         <div className={styles.inputDiv}>
             <input 
                 className={classNames({
-                    [styles.formInput]: true,
-                    [styles["userFormInput--active"]]: inputActive
+                    [styles["userFormInput--active"]]: inputActive,
+                    [styles["input--wrong"]]: errorActive
                 })}
                 type="text" placeholder="Usuário"
                 onFocus={(event) => moveIcon(event.target)}
