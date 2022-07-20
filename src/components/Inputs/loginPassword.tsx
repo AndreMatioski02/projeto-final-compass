@@ -1,13 +1,18 @@
 import classNames from 'classnames';
 import passwordIcon from 'assets/images/password-icon.svg';
 import { UserLoginContext } from 'context/UserLogin';
-import { useContext, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import styles from './Input.module.scss';
 
 export default function InputLoginPassword() {
-    const { password, setPassword } = useContext(UserLoginContext);
+    const { password, setPassword, setPasswordCorrect, passwordCorrect, errorActive, } = useContext(UserLoginContext);
     const [inputActive, setInputActive] = useState(false);
     const [iconInactive, setIconInactive] = useState(false);
+
+    useEffect(() => {
+        password.length < 6 ? setPasswordCorrect(false) : setPasswordCorrect(true);
+        console.log(passwordCorrect)
+    }, [password]);
 
     function moveIcon(input: HTMLInputElement) {
         setIconInactive(true);
@@ -23,8 +28,8 @@ export default function InputLoginPassword() {
         <div className={styles.inputDiv}>
             <input 
                 className={classNames({
-                    [styles.formInput]: true,
-                    [styles["passFormInput--active"]]: inputActive
+                    [styles["passFormInput--active"]]: inputActive,
+                    [styles["input--wrong"]]: errorActive
                 })}
                 type="password" placeholder="Senha"
                 onFocus={(event) => moveIcon(event.target)}

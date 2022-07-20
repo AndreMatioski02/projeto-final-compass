@@ -12,7 +12,13 @@ import InputLoginPassword from 'components/Inputs/loginPassword';
 
 export default function Login() {
     const navigate = useNavigate();    
-    const { email, setEmail, password, setPassword } = useContext(UserLoginContext);
+    const { email, 
+            setEmail,
+            emailCorrect,
+            password, 
+            setPassword,
+            passwordCorrect,
+    } = useContext(UserLoginContext);
     const [errorActive, setErrorActive] = useState(false);       
     const [user, loading] = useAuthState(auth);     
     
@@ -24,13 +30,13 @@ export default function Login() {
     function validateForm() {
         event.preventDefault()
 		let inputs = document.querySelectorAll("input");
-		let valid = true;
 		inputs.forEach(input => {
-			if(input.value == "") {
-				valid = false;
+			if(!emailCorrect || !passwordCorrect) {
 				input.style.border = "1px solid #E9B425";
 				setErrorActive(true);
 			} else {
+                input.style.border = "1px solid #FFFFFF";
+                setErrorActive(false)
                 logInWithEmailAndPassword(email, password)
             }
 		});
@@ -40,7 +46,9 @@ export default function Login() {
         try {
           await signInWithEmailAndPassword(auth, email, password);
         } catch (err) {
-          console.error(err);
+            setErrorActive(true);
+            let inputs = document.querySelectorAll("input");
+		    inputs.forEach(input => {input.style.border = "1px solid #E9B425"})			
         }
     } 
 
