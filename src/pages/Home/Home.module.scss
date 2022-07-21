@@ -5,15 +5,15 @@
 }
 
 .mainHome {
-    width: 100%;
-
+    width: 100%;    
+    height: 100vh;
     .homeContent {
       margin: 0;
       .divImage {
         width: 30%;
         height: 100vh;
         background-image: url(../../assets/images/main-logo-image.png);
-        background-position: right 30%;
+        background-position: right 60%;
         background-size: cover;
         background-repeat: no-repeat;
         position: fixed;
@@ -46,5 +46,288 @@
           margin-top: 0;
       }
     }
+  }
+}
+
+@media (max-width: 1030px) {
+  .bodyHome {
+    background: rgb(240,240,240);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .mainHome {
+      width: 100%;
+      height: 100vh;
+      .homeContent {
+        margin: 0;
+        .divImage {
+          display: flex;
+          width: 30%;
+          height: 100vh;
+          background-image: url(../../assets/images/main-logo-image.png);
+          background-position: right 30%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: fixed;
+      }
+      
+      .texts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-right: 2rem;
+        margin-top: 0;
+        margin-bottom: 1.125rem;
+        padding-top: 3rem;
+        .englishFirst {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0;
+            color: #C12D18;
+        }
+        .english {
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin: 0;
+            color: #C12D18;
+        }
+    
+        .portugues {
+            font-size: 12px;
+            margin-top: 0;
+        }
+      }
     }
+  }
+}
+
+@media (max-width: 770px) {
+  .bodyHome {
+    background: rgb(240,240,240);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .mainHome {
+      width: 100%;
+      height: 100vh;
+      .homeContent {
+        margin: 0;
+        .divImage {
+          display: flex;
+          width: 30%;
+          height: 70vh;
+          background-image: url(../../assets/images/main-logo-image.png);
+          background-position: right 30%;
+          background-size: cover;
+          background-repeat: no-repeat;
+          position: absolute;
+      }
+      
+      .texts {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: flex-end;
+        margin-right: 2rem;
+        margin-top: 0;
+        margin-bottom: 1.125rem;
+        padding-top: 0;
+        .englishFirst {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 0;
+            color: #C12D18;
+        }
+        .english {
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin: 0;
+            color: #C12D18;
+        }
+    
+        .portugues {
+            font-size: 12px;
+            margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .bodyHome {
+    background: rgb(240,240,240);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .mainHome {
+      width: 100%;      
+      height: 100vh;
+      .homeContent {
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        .divImage {
+          display: flex;
+          width: 100%;
+          height: 100vh;
+          background-image: url(../../assets/images/main-logo-image.png);
+          background-position: left;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          opacity: 15%;
+      }
+      
+      .texts {
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-right: 0;
+        margin-top: 2rem;
+        padding-top: 0; 
+        padding: 1rem;       
+        width: 100%;      
+        height: 100vh;
+        .englishFirst {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+            color: #C12D18;
+        }
+        .english {
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin: 0;
+            color: #C12D18;
+        }
+    
+        .portugues {
+            font-size: 14px;
+            margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .bodyHome {
+    background: rgb(240,240,240);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .mainHome {
+      width: 100%;      
+      height: 100vh;
+      .homeContent {
+        margin: 0;
+        height: 100vh;
+        width: 100%;
+        .divImage {
+          display: flex;
+          width: 100%;
+          height: 100vh;
+          background-image: url(../../assets/images/main-logo-image.png);
+          background-position: left;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          opacity: 15%;
+      }
+      
+      .texts {
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-right: 0;
+        margin-top: 2rem;
+        padding-top: 0; 
+        padding: 1rem;       
+        width: 100%;      
+        height: 100vh;
+        .englishFirst {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+            color: #C12D18;
+        }
+        .english {
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin: 0;
+            color: #C12D18;
+        }
+    
+        .portugues {
+            font-size: 14px;
+            margin-top: 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .bodyHome {
+    background: rgb(240,240,240);
+    height: 100vh;
+    width: 100vw;
+  }
+  
+  .mainHome {
+      width: 100%;      
+      height: 100vh;
+      .homeContent {
+        margin: 0;
+        height: 100vh;
+        .divImage {
+          display: flex;
+          width: 100%;
+          height: 100vh;
+          background-image: url(../../assets/images/main-logo-image.png);
+          background-position: bottom;
+          background-size: contain;
+          background-repeat: no-repeat;
+          position: absolute;
+          opacity: 15%;
+      }
+      
+      .texts {
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-right: 5rem;
+        margin-top: 2rem;
+        padding-top: 0; 
+        padding: 1rem;       
+        width: 100%;      
+        height: 100vh;
+        .englishFirst {
+            font-weight: bold;
+            font-size: 18px;
+            margin: 0;
+            color: #C12D18;
+        }
+        .english {
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            margin: 0;
+            color: #C12D18;
+        }
+    
+        .portugues {
+            font-size: 14px;
+            margin-top: 0;
+        }
+      }
+    }
+  }
 }

@@ -23,3 +23,27 @@
       }
   }
 }
+
+@media (max-width: 430px) {
+    .weatherContainer {  
+        &__location {
+            font-size: 18px;
+        }
+      }
+}
+
+@media (max-width: 380px) {
+    .weatherContainer {  
+        &__location {
+            font-size: 16px;
+        }
+      }
+}
+
+@media (max-width: 325px) {
+    .weatherContainer {  
+        &__location {
+            font-size: 16px;
+        }
+      }
+}
