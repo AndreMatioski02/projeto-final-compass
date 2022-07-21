@@ -10,3 +10,9 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+@media (max-width: 330px) {
+    .divImage {
+        display: none;
+    }
+}

@@ -114,3 +114,469 @@
         }
     }
 }
+
+@media (max-width: 1030px) {
+    .mainLogin {
+        height: 100vh;
+        .mainDiv {
+            width: 50%;
+            form {
+                width: 100%;
+                .welcomeDiv {
+                    margin-left: 3.75rem;
+                    h1 {
+                        color: #E0E0E0;
+                        font-size: 38px;
+                        font-weight: 200;
+                        margin: 0;
+                        margin-top: 1.5rem;
+                    }
+                    h2 {
+                        color: #E0E0E0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 8px 42px 8px 0px;
+                        flex-wrap: wrap;
+                        margin: 0;
+                    }
+                }
+            
+                .formDiv {
+                    p {
+                        margin-left: 3.75rem;
+                        margin-bottom: 1rem;
+                        margin-top: 1rem;
+                        font-size: 28px;
+                        color: #E0E0E0;
+                        font-weight: 200;
+                    }
+    
+                    .errorContainer {
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        display: none;
+                        width: 90%;
+                        margin: 0;
+                        margin-top: 1rem;
+                        margin-left: 3rem;
+                        p {
+                            color: #E9B425;
+                            font-weight: 500;
+                            font-size: 0.8rem;
+                            margin: 0;
+                        }
+                        &__active {
+                            display: flex;
+                        }
+                    }
+    
+                    .signUpDiv {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 8px;
+                        .signUpText{
+                            text-align: center;
+                            font-size: 14px;
+                            font-weight: 200;
+                            margin-left: 4.25rem;
+                            a {
+                                color: #FF2D04;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+    
+                        }
+                    }
+    
+                    button {
+                        height: 2.75rem;
+                        width: 19rem;
+                        margin-left: 3.75rem;
+                        margin-top: 14px;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+        .divImage {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 50%;
+            height: 100vh;
+            background-image: url(../../assets/images/main-image.png);
+            background-position: left 10%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            img {
+                width: 45%;
+                padding: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .mainLogin {
+        height: 100vh;
+        .mainDiv {
+            width: 70%;
+            form {
+                width: 100%;
+                .welcomeDiv {
+                    margin-left: 3.75rem;
+                    h1 {
+                        color: #E0E0E0;
+                        font-size: 38px;
+                        font-weight: 200;
+                        margin: 0;
+                        margin-top: 1.5rem;
+                    }
+                    h2 {
+                        color: #E0E0E0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 8px 42px 8px 0px;
+                        flex-wrap: wrap;
+                        margin: 0;
+                    }
+                }
+            
+                .formDiv {
+                    p {
+                        margin-left: 3.75rem;
+                        margin-bottom: 1rem;
+                        margin-top: 1rem;
+                        font-size: 28px;
+                        color: #E0E0E0;
+                        font-weight: 200;
+                    }
+    
+                    .errorContainer {
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        display: none;
+                        width: 90%;
+                        margin: 0;
+                        margin-top: 1rem;
+                        margin-left: 3rem;
+                        p {
+                            color: #E9B425;
+                            font-weight: 500;
+                            font-size: 0.8rem;
+                            margin: 0;
+                        }
+                        &__active {
+                            display: flex;
+                        }
+                    }
+    
+                    .signUpDiv {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 8px;
+                        .signUpText{
+                            text-align: center;
+                            font-size: 14px;
+                            font-weight: 200;
+                            margin-left: 4.25rem;
+                            a {
+                                color: #FF2D04;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+    
+                        }
+                    }
+    
+                    button {
+                        height: 2.75rem;
+                        width: 19rem;
+                        margin-left: 3.75rem;
+                        margin-top: 14px;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+        .divImage {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            width: 50%;
+            height: 100vh;
+            background-image: url(../../assets/images/main-image.png);
+            background-position: left 10%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            img {
+                width: 60%;
+                padding: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width: 430px) {
+    .mainLogin {
+        height: 100vh;
+        .mainDiv {
+            width: 100%;
+            form {
+                width: 100%;
+                .welcomeDiv {
+                    margin-left: 3.75rem;
+                    h1 {
+                        color: #E0E0E0;
+                        font-size: 38px;
+                        font-weight: 200;
+                        margin: 0;
+                        margin-top: 1.5rem;
+                    }
+                    h2 {
+                        color: #E0E0E0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 8px 42px 8px 0px;
+                        flex-wrap: wrap;
+                        margin: 0;
+                    }
+                }
+            
+                .formDiv {
+                    p {
+                        margin-left: 3.75rem;
+                        margin-bottom: 1rem;
+                        margin-top: 1rem;
+                        font-size: 28px;
+                        color: #E0E0E0;
+                        font-weight: 200;
+                    }
+    
+                    .errorContainer {
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        display: none;
+                        width: 90%;
+                        margin: 0;
+                        margin-top: 1rem;
+                        margin-left: 3rem;
+                        p {
+                            color: #E9B425;
+                            font-weight: 500;
+                            font-size: 0.8rem;
+                            margin: 0;
+                        }
+                        &__active {
+                            display: flex;
+                        }
+                    }
+    
+                    .signUpDiv {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 8px;
+                        .signUpText{
+                            text-align: center;
+                            font-size: 14px;
+                            font-weight: 200;
+                            margin-left: 4.5rem;
+                            a {
+                                color: #FF2D04;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+    
+                        }
+                    }
+    
+                    button {
+                        height: 2.75rem;
+                        width: 19rem;
+                        margin-left: 3.75rem;
+                        margin-top: 14px;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+        .divImage {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .mainLogin {
+        height: 100vh;
+        .mainDiv {
+            width: 100%;
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: center;
+                width: 100%;
+                .welcomeDiv {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin-left: 2.5rem;
+                    h1 {
+                        color: #E0E0E0;
+                        font-size: 38px;
+                        font-weight: 200;
+                        margin: 0;
+                        margin-top: 1.5rem;
+                    }
+                    h2 {
+                        color: #E0E0E0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 8px 32px 8px 0px;
+                        flex-wrap: wrap;
+                        margin: 0;
+                    }
+                }
+            
+                .formDiv {
+                    display: flex;
+                    align-items: flex-start;
+                    justify-content: center;
+                    flex-direction: column;
+                    p {
+                        margin-left: 2.5rem;
+                        margin-bottom: 1rem;
+                        margin-top: 1rem;
+                        font-size: 28px;
+                        color: #E0E0E0;
+                        font-weight: 200;
+                    }
+    
+                    .errorContainer {
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        display: none;
+                        width: 90%;
+                        margin: 0;
+                        margin-top: 1rem;
+                        margin-left: 1.5rem;
+                        p {
+                            color: #E9B425;
+                            font-weight: 500;
+                            font-size: 0.8rem;
+                            margin: 0;
+                        }
+                        &__active {
+                            display: flex;
+                        }
+                    }
+    
+                    .signUpDiv {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 8px;
+                        .signUpText{
+                            text-align: center;
+                            font-size: 14px;
+                            font-weight: 200;
+                            margin-left: 48px;
+                            a {
+                                color: #FF2D04;
+                                text-decoration: none;
+                                cursor: pointer;
+                            }
+    
+                        }
+                    }
+    
+                    button {
+                        height: 2.75rem;
+                        width: 18rem;
+                        margin-left: 2.75rem;
+                        margin-top: 14px;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+        .divImage {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 325px) {
+    .mainLogin {
+        height: 100vh;
+        .mainDiv {
+            width: 100%;
+            form {
+                width: 100%;
+                .welcomeDiv {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: center;
+                    margin-left: 1.75rem;
+                    h1 {
+                        color: #E0E0E0;
+                        font-size: 38px;
+                        font-weight: 200;
+                        margin: 0;
+                        margin-top: 1rem;
+                    }
+                    h2 {
+                        color: #E0E0E0;
+                        font-size: 14px;
+                        font-weight: 400;
+                        padding: 8px 16px 8px 0px;
+                        flex-wrap: wrap;
+                        margin: 0;
+                    }
+                }
+            
+                .formDiv {
+                    p {
+                        margin-left: 1.75rem;
+                        margin-bottom: 1rem;
+                        margin-top: 1rem;
+                        font-size: 28px;
+                    }    
+    
+                    .signUpDiv {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 8px;
+                        .signUpText{
+                            font-size: 14px;
+                            margin-left: 22px;
+    
+                        }
+                    }
+    
+                    button {
+                        height: 2.5rem;
+                        width: 16rem;
+                        margin-left: 2.125rem;
+                        margin-top: 14px;
+                        margin-bottom: 1.5rem;
+                    }
+                }
+            }
+        }
+        .divImage {
+            display: none;
+        }
+    }
+}

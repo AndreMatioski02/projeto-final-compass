@@ -50,3 +50,139 @@
         display: none;
     }
 }
+
+@media (max-width: 430px) {
+    .inputDiv {
+        margin-top: 8px;   
+        margin-left: 3.75rem; 
+        margin-bottom: 8px;
+        input {
+            border: solid 1px #FFFFFF;
+            background-color: #26292C;
+            border-radius: 20px;
+            height: 2.75rem;
+            width: 19rem;
+            padding: 16px;
+        }
+
+        .userIcon, .passIcon {
+            width: 28px;
+        }
+    }
+}
+
+@media (max-width: 1030px) {
+    .inputDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 8px;   
+        margin-left: 3.5rem; 
+        margin-bottom: 8px;
+        input {
+            border: solid 1px #FFFFFF;
+            background-color: #26292C;
+            border-radius: 20px;
+            height: 2.75rem;
+            width: 18rem;
+            padding: 16px;
+            color: #FFFFFF;
+            
+            &::placeholder {
+                color: #FFFFFF;
+            }
+        }
+
+        .userIcon, .passIcon {
+            width: 28px;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .inputDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 8px;   
+        margin-left: 3.5rem; 
+        margin-bottom: 8px;
+        input {
+            border: solid 1px #FFFFFF;
+            background-color: #26292C;
+            border-radius: 20px;
+            height: 2.75rem;
+            width: 18rem;
+            padding: 16px;
+            color: #FFFFFF;
+            
+            &::placeholder {
+                color: #FFFFFF;
+            }
+        }
+
+        .userIcon, .passIcon {
+            width: 28px;
+        }
+    }
+}
+
+@media (max-width: 380px) {
+    .inputDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 8px;   
+        margin-left: 2.25rem; 
+        margin-bottom: 8px;
+        input {
+            border: solid 1px #FFFFFF;
+            background-color: #26292C;
+            border-radius: 20px;
+            height: 2.75rem;
+            width: 18rem;
+            padding: 16px;
+            color: #FFFFFF;
+            
+            &::placeholder {
+                color: #FFFFFF;
+            }
+        }
+
+        .userIcon, .passIcon {
+            width: 28px;
+        }
+    }
+}
+
+@media (max-width: 325px) {
+    .inputDiv {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 8px;   
+        margin-left: 1.25rem; 
+        margin-bottom: 8px;
+        input {
+            border: solid 1px #FFFFFF;
+            background-color: #26292C;
+            border-radius: 20px;
+            height: 2.5rem;
+            width: 16rem;
+            padding: 16px;
+            color: #FFFFFF;
+            
+            &::placeholder {
+                color: #FFFFFF;
+            }
+        }
+
+        .userIcon, .passIcon {
+            width: 26px;
+        }
+    }
+}
