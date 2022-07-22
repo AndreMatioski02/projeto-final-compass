@@ -64,13 +64,24 @@
                     &__active {
                         display: flex;
                     }
+                }                
+
+                button {
+                    border-radius: 24px;
+                    border: none;
+                    background-color: #FF2D04;
+                    height: 3rem;
+                    width: 19rem;
+                    color: #FFFFFF;
+                    font-weight: 400;
+                    margin-top: 36px;
                 }
 
                 .signUpDiv {
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    padding-left: 1rem;
+                    padding-left: 12px;
                     margin-top: 1rem;
                     .signUpText{
                         text-align: center;
@@ -83,17 +94,6 @@
                         }
 
                     }
-                }
-
-                button {
-                    border-radius: 24px;
-                    border: none;
-                    background-color: #FF2D04;
-                    height: 3rem;
-                    width: 19rem;
-                    color: #FFFFFF;
-                    font-weight: 400;
-                    margin-top: 48px;
                 }
             }
         }
@@ -171,6 +171,14 @@
                         }
                     }
     
+                    button {
+                        height: 2.75rem;
+                        width: 18rem;
+                        margin-left: 3.5rem;
+                        margin-top: 12px;
+                        margin-bottom: 0;
+                    }
+    
                     .signUpDiv {
                         display: flex;
                         align-items: center;
@@ -180,7 +188,7 @@
                             text-align: center;
                             font-size: 14px;
                             font-weight: 200;
-                            margin-left: 4.25rem;
+                            margin-left: 3.75rem;
                             a {
                                 color: #FF2D04;
                                 text-decoration: none;
@@ -188,14 +196,6 @@
                             }
     
                         }
-                    }
-    
-                    button {
-                        height: 2.75rem;
-                        width: 19rem;
-                        margin-left: 3.75rem;
-                        margin-top: 14px;
-                        margin-bottom: 1.5rem;
                     }
                 }
             }
@@ -274,16 +274,25 @@
                         }
                     }
     
+                    button {
+                        height: 2.75rem;
+                        width: 18rem;
+                        margin-left: 3.5rem;
+                        margin-top: 14px;
+                        margin-bottom: 0;
+                    }
+    
                     .signUpDiv {
                         display: flex;
                         align-items: center;
                         justify-content: center;
                         margin-top: 8px;
+                        margin-bottom: 0;
                         .signUpText{
                             text-align: center;
                             font-size: 14px;
                             font-weight: 200;
-                            margin-left: 4.25rem;
+                            margin-left: 3.75rem;
                             a {
                                 color: #FF2D04;
                                 text-decoration: none;
@@ -291,14 +300,6 @@
                             }
     
                         }
-                    }
-    
-                    button {
-                        height: 2.75rem;
-                        width: 19rem;
-                        margin-left: 3.75rem;
-                        margin-top: 14px;
-                        margin-bottom: 1.5rem;
                     }
                 }
             }
@@ -377,6 +378,14 @@
                         }
                     }
     
+                    button {
+                        height: 2.75rem;
+                        width: 18rem;
+                        margin-left: 3.5rem;
+                        margin-top: 14px;
+                        margin-bottom: 0;
+                    }
+    
                     .signUpDiv {
                         display: flex;
                         align-items: center;
@@ -386,7 +395,7 @@
                             text-align: center;
                             font-size: 14px;
                             font-weight: 200;
-                            margin-left: 4.5rem;
+                            margin-left: 4rem;
                             a {
                                 color: #FF2D04;
                                 text-decoration: none;
@@ -394,14 +403,6 @@
                             }
     
                         }
-                    }
-    
-                    button {
-                        height: 2.75rem;
-                        width: 19rem;
-                        margin-left: 3.75rem;
-                        margin-top: 14px;
-                        margin-bottom: 1.5rem;
                     }
                 }
             }
@@ -479,6 +480,14 @@
                             display: flex;
                         }
                     }
+
+                    button {
+                        height: 2.75rem;
+                        width: 18rem;
+                        margin-left: 2.5rem;
+                        margin-top: 14px;
+                        margin-bottom: 0;
+                    }
     
                     .signUpDiv {
                         display: flex;
@@ -499,13 +508,6 @@
                         }
                     }
     
-                    button {
-                        height: 2.75rem;
-                        width: 18rem;
-                        margin-left: 2.75rem;
-                        margin-top: 14px;
-                        margin-bottom: 1.5rem;
-                    }
                 }
             }
         }
@@ -551,7 +553,15 @@
                         margin-bottom: 1rem;
                         margin-top: 1rem;
                         font-size: 28px;
-                    }    
+                    }  
+    
+                    button {
+                        height: 2.5rem;
+                        width: 16rem;
+                        margin-left: 1.25rem;
+                        margin-top: 14px;
+                        margin-bottom: 0;
+                    }  
     
                     .signUpDiv {
                         display: flex;
@@ -560,17 +570,9 @@
                         margin-top: 8px;
                         .signUpText{
                             font-size: 14px;
-                            margin-left: 22px;
+                            margin-left: 16px;
     
                         }
-                    }
-    
-                    button {
-                        height: 2.5rem;
-                        width: 16rem;
-                        margin-left: 2.125rem;
-                        margin-top: 14px;
-                        margin-bottom: 1.5rem;
                     }
                 }
             }

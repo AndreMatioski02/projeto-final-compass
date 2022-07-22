@@ -168,6 +168,11 @@ export default function Cadastro() {
 			    			<p>Ops, usuário ou senha inválidos.</p>
 			    			<p>Tente novamente!</p>
 			    		</div>
+                        <button 
+                            onClick={() => (
+                            validateForm()
+                        )}>Cadastrar-se
+                        </button> 
                         <div className={styles.signUpDiv}>
                             <p className={styles.signUpText}>
                                 Já possui cadastro? 
@@ -179,11 +184,7 @@ export default function Cadastro() {
                                     {` Faça Login aqui`}
                                 </a>
                             </p>                        
-                        </div>
-                        <button 
-                        onClick={() => (
-                            validateForm()
-                        )}>Cadastrar-se</button>                    
+                        </div>                   
                     </div>
                 </form>
             </div>            
