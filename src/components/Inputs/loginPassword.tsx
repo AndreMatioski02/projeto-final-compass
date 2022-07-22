@@ -11,7 +11,6 @@ export default function InputLoginPassword() {
 
     useEffect(() => {
         password.length < 6 ? setPasswordCorrect(false) : setPasswordCorrect(true);
-        console.log(passwordCorrect)
     }, [password]);
 
     function moveIcon(input: HTMLInputElement) {
